@@ -20,7 +20,7 @@ readlines.question("GameID: ", (answer) => {
         client.join(pin, name);
         console.log(`I have logged in with the name of ${name}`);
         client.on("questionStart", (question) => {
-            question.answer(Math.floor(Math.random() * 4));
+            question.answer(Math.floor(Math.random() * 2));
         });
         return client;
     });
