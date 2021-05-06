@@ -8,13 +8,7 @@ const readlines = readline.createInterface({
     output: process.stdout,
 });
 console.log(`
- ___  __    ________  ___  ___  ________  ________  _________        ________  ________  _________   
-|\\  \\|\\  \\ |\\   __  \\|\\  \\|\\  \\|\\   __  \\|\\   __  \\|\\___   ___\\     |\\   __  \\|\\   __  \\|\\___   ___\\ 
-\\ \\  \\/  /|\\ \\  \\|\\  \\ \\  \\\\\\  \\ \\  \\|\\  \\ \\  \\|\\  \\|___ \\  \\_|     \\ \\  \\|\\ /\\ \\  \\|\\  \\|___ \\  \\_| 
- \\ \\   ___  \\ \\   __  \\ \\   __  \\ \\  \\\\\\  \\ \\  \\\\\\  \\   \\ \\  \\       \\ \\   __  \\ \\  \\\\\\  \\   \\ \\  \\  
-  \\ \\  \\\\ \\  \\ \\  \\ \\  \\ \\  \\ \\  \\ \\  \\\\\\  \\ \\  \\\\\\  \\   \\ \\  \\       \\ \\  \\|\\  \\ \\  \\\\\\  \\   \\ \\  \\ 
-   \\ \\__\\\\ \\__\\ \\__\\ \\__\\ \\__\\ \\__\\ \\_______\\ \\_______\\   \\ \\__\\       \\ \\_______\\ \\_______\\   \\ \\__\\
-    \\|__| \\|__|\\|__|\\|__|\\|__|\\|__|\\|_______|\\|_______|    \\|__|        \\|_______|\\|_______|    \\|__|
+Kahoot bot updated by justnothi FORKED FROM NUCKER's KAHOOT BOT
     At your service
 `)
 readlines.question("GameID: ", (answer) => {
@@ -24,7 +18,7 @@ readlines.question("GameID: ", (answer) => {
         const client = new Kahoot();
         const name = settings.random_name ? chance.name() : settings.bot_name+i;
         client.join(pin, name);
-        console.log(`I have logged in as ${name}`);
+        console.log(`I have logged in with the name of ${name}`);
         client.on("questionStart", (question) => {
             question.answer(Math.floor(Math.random() * 4));
         });
